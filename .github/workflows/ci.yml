@@ -1,0 +1,36 @@
+name: Terraform CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+
+jobs:
+  terraform-lint-and-validate:
+    name: Terraform Lint and Validate
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Setup Terraform
+      uses: hashicorp/setup-terraform@v2
+
+    - name: Terraform Format Check
+      run: terraform fmt -check -recursive
+
+    - name: Setup TFLint
+      uses: terraform-linters/setup-tflint@v3
+    
+    - name: Init TFLint
+      run: tflint --init
+
+    - name: Run TFLint
+      run: tflint --recursive
+
+    - name: Terraform Init & Validate (All Dirs)
+      run: |
+        terraform -chdir=terraform/0_project-factory init -backend=false
+        terraform -chdir=terraform/0_project-factory validate
+        terraform -chdir=terraform/1_iam_assessor_deployment init -backend=false
+        terraform -chdir=terraform/1_iam_assessor_deployment validate

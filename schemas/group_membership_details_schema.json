@@ -1,0 +1,6 @@
+[
+  { "name": "assessment_timestamp", "type": "TIMESTAMP", "mode": "REQUIRED" },
+  { "name": "group_email", "type": "STRING", "mode": "REQUIRED" },
+  { "name": "member_email", "type": "STRING", "mode": "NULLABLE" },
+  { "name": "member_type", "type": "STRING", "mode": "NULLABLE", "description": "USER, SERVICE_ACCOUNT, GROUP" }
+]

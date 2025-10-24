@@ -1,0 +1,32 @@
+[
+  {
+    "name": "assessment_timestamp",
+    "type": "TIMESTAMP",
+    "mode": "REQUIRED"
+  },
+  {
+    "name": "scope",
+    "type": "STRING",
+    "mode": "REQUIRED"
+  },
+  {
+    "name": "principal_type",
+    "type": "STRING",
+    "mode": "REQUIRED"
+  },
+  {
+    "name": "principal_email",
+    "type": "STRING",
+    "mode": "REQUIRED"
+  },
+  {
+    "name": "access_list",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "description": "このプリンシパルがアクセス可能なリソースとロールのリスト",
+    "fields": [
+      { "name": "resource_name", "type": "STRING" },
+      { "name": "role", "type": "STRING" }
+    ]
+  }
+]

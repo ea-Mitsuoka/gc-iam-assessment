@@ -1,0 +1,20 @@
+[
+  {"name": "rule_id", "type": "STRING", "mode": "NULLABLE", "description": "違反した職務分掌ルールのID"},
+  {"name": "description", "type": "STRING", "mode": "NULLABLE", "description": "違反したルールの説明、またはスキップ理由"},
+  {"name": "principal_email", "type": "STRING", "mode": "NULLABLE", "description": "違反しているプリンシパルのメールアドレス"},
+  {"name": "principal_type", "type": "STRING", "mode": "NULLABLE", "description": "プリンシパルのタイプ (例: USER, SERVICE_ACCOUNT)"},
+  {"name": "conflicting_role1", "type": "STRING", "mode": "NULLABLE", "description": "違反に関与したロール1"},
+  {"name": "conflicting_role2", "type": "STRING", "mode": "NULLABLE", "description": "違反に関与したロール2"},
+  {"name": "role1_type", "type": "STRING", "mode": "NULLABLE", "description": "ロール1のタイプ (GCP_IAM or WORKSPACE_ADMIN)"},
+  {"name": "role2_type", "type": "STRING", "mode": "NULLABLE", "description": "ロール2のタイプ (GCP_IAM or WORKSPACE_ADMIN)"},
+  {
+    "name": "assignments",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "description": "違反に関連する具体的な権限割り当て (主にGCP IAM)",
+    "fields": [
+      {"name": "resource_name", "type": "STRING", "mode": "NULLABLE"},
+      {"name": "role", "type": "STRING", "mode": "NULLABLE"}
+    ]
+  }
+]

@@ -1,0 +1,9 @@
+[
+  { "name": "assessment_timestamp", "type": "TIMESTAMP", "mode": "REQUIRED" },
+  { "name": "principal_email", "type": "STRING", "mode": "REQUIRED" },
+  { "name": "resource_name", "type": "STRING", "mode": "REQUIRED" },
+  { "name": "current_role", "type": "STRING", "mode": "REQUIRED" },
+  { "name": "recommended_role", "type": "STRING", "mode": "NULLABLE" },
+  { "name": "reason", "type": "STRING", "mode": "REQUIRED", "description": "検出理由 (例: IAM_RECOMMENDER)" },
+  { "name": "recommendation_subtype", "type": "STRING", "mode": "NULLABLE", "description": "IAM Recommenderによって返された推奨サブタイプ (例: REMOVE_ROLE, REPLACE_ROLE)" }
+]

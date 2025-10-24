@@ -1,0 +1,5 @@
+[
+  { "name": "assessment_timestamp", "type": "TIMESTAMP", "mode": "REQUIRED" },
+  { "name": "risk_type", "type": "STRING", "mode": "REQUIRED", "description": "EXCESSIVE_INHERITANCE, NESTED_GROUP" },
+  { "name": "details", "type": "JSON", "mode": "NULLABLE", "description": "リスクの詳細情報" }
+]

@@ -1,0 +1,4 @@
+# 共通の依存関係を読み込む
+-r ../../../common_requirements.txt
+
+# このFunction固有のライブラリ

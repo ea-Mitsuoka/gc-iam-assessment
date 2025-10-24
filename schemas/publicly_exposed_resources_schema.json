@@ -1,0 +1,7 @@
+[
+  { "name": "assessment_timestamp", "type": "TIMESTAMP", "mode": "REQUIRED" },
+  { "name": "scope", "type": "STRING", "mode": "REQUIRED" },
+  { "name": "resource_name", "type": "STRING", "mode": "REQUIRED" },
+  { "name": "public_principal", "type": "STRING", "mode": "REQUIRED", "description": "公開対象 (allUsers または allAuthenticatedUsers)" },
+  { "name": "role", "type": "STRING", "mode": "REQUIRED" }
+]

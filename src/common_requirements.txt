@@ -1,0 +1,6 @@
+# 全てのFunctionで共通して使用するライブラリ
+functions-framework
+cloudevents
+google-cloud-identity
+google-cloud-bigquery
+python-json-logger

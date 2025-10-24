@@ -1,0 +1,9 @@
+[
+  { "name": "assessment_timestamp", "type": "TIMESTAMP", "mode": "REQUIRED" },
+  { "name": "scope", "type": "STRING", "mode": "REQUIRED" },
+  { "name": "principal_type", "type": "STRING", "mode": "REQUIRED" },
+  { "name": "principal_email", "type": "STRING", "mode": "REQUIRED" },
+  { "name": "resource_name", "type": "STRING", "mode": "REQUIRED" },
+  { "name": "high_risk_role", "type": "STRING", "mode": "REQUIRED" },
+  { "name": "risk_category", "type": "STRING", "mode": "NULLABLE", "description": "例: OWNER_LEVEL, ADMIN_ROLE, SA_IMPERSONATION" }
+]
