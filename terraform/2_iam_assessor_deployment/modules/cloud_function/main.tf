@@ -71,7 +71,7 @@ resource "google_cloudfunctions2_function" "function" {
     # 作成した専用サービスアカウントでFunctionを実行する
     service_account_email = google_service_account.function_sa.email
     # ◀◀ NEW: Ingress設定を追加し、内部トラフィックのみを許可する
-    ingress_settings      = "INGRESS_SETTINGS_INTERNAL_ONLY"
+    ingress_settings = "INGRESS_SETTINGS_INTERNAL_ONLY"
   }
 
   # trigger_typeが"topic"の場合にのみ、イベントトリガーを設定

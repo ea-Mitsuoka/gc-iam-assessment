@@ -12,6 +12,8 @@ domain.env
 env
 tools/token.json
 tools/gc-iam/
+client_secret.json
+
 
 # Automatically created terraform files
 /terraform/1_core/services/logsink/sinks/gcp_log_sink_config.csv

@@ -11,7 +11,7 @@
     # terraform/0_project-factory/terraform.tfvars
 
     org_id    = "123456789012" # あなたの組織ID
-    folder_id = "345678901234" # 新しいプロジェクトを作成するフォルダID
+    folder_id = "345678901234" # 新しいプロジェクトを作成するフォルダID(プロジェクトの設置場所が組織直下ではない場合に必要に応じて)
     # region = "us-central1" # (オプション) デフォルト(asia-northeast1)以外を使いたい場合
     ```
 

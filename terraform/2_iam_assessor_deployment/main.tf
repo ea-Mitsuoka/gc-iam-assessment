@@ -108,7 +108,7 @@ resource "google_project_iam_member" "assessor_sa_project_viewer" {
 
   project = each.value.project_id
   role    = each.value.role
-  member = "serviceAccount:${each.value.sa_email}"
+  member  = "serviceAccount:${each.value.sa_email}"
 }
 
 # --- BigQuery (外部スキーマファイルを利用) ---
@@ -134,7 +134,7 @@ resource "google_cloud_scheduler_job" "assessors" {
     # 修正点: モジュールの出力(trigger_topic_id)を直接参照
     # これにより、依存関係が明示的になる
     topic_name = module.assessment_functions[each.key].trigger_topic_id
-    
+
     # 変更点: dataを動的に生成するロジックをここに記述
     data = base64encode(
       # キーが"principal-assessor"の場合のみ、スコープに応じたデータを生成

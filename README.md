@@ -113,3 +113,8 @@ Terraformの作業から一旦離れ、課金管理者が手動で作業を行�
   - `terraform fmt -recursive`: Terraformコードを公式の規約に沿って自動整形します。これにより、コードのスタイルが常に統一されます。
 
   - `terraform validate`: コードの構文が正しいかをチェックします。applyする前の基本的な健全性チェックとして有効です。
+
+
+### TODO:
+
+- 最初の0_project_factoryでtfvars作成するときに、org_idをコマンドで取得できるようにする

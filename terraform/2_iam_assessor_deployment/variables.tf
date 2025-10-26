@@ -61,9 +61,9 @@ variable "bq_dataset_id" {
 variable "assessment_functions" {
   type = map(object({
     # 変更点: optional()を使い、pathとentryを任意項目にする
-    path     = optional(string)
-    entry    = optional(string)
-    category = string
+    path                  = optional(string)
+    entry                 = optional(string)
+    category              = string
     service_account_roles = optional(list(string), [])
     # 修正点: Function固有の環境変数を定義できるようにする
     environment_variables = optional(map(string), {})
@@ -114,10 +114,10 @@ variable "scheduler_configs" {
       schedule    = "0 10 * * *"
     }
   EOT
-# ◀◀ NEW: validationブロックを追加
+  # ◀◀ NEW: validationブロックを追加
   validation {
     # scheduler_configsの全てのキーが、assessment_functionsのキーに存在するかをチェック
-    condition     = alltrue([
+    condition = alltrue([
       for k in keys(var.scheduler_configs) : contains(keys(var.assessment_functions), k)
     ])
     error_message = "scheduler_configsのキーが、assessment_functionsに存在しません。キーが一致しているか確認してください。"
